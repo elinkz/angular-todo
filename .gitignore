@@ -1,0 +1,4 @@
+node_modules
+app/dist
+.git
+.DS_Store

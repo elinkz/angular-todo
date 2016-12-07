@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="todoApp">
+<head>
+	<meta charset="UTF-8">
+	<title>AngularJS Todo App</title>
+	<link rel="stylesheet" href="style.css">
+</head>
+<body ng-controller="index">
+	<div class="container">
+		<h2>My todos</h2>
+		<!-- Todos input -->
+	  <form role="form" ng-submit="addTodo()">
+	    <div class="row">
+	      <div class="input-group">
+	        <input type="text" ng-model="todo" placeholder="What needs to be done?" class="form-control">
+	        <span class="input-group-btn">
+	          <input type="submit" class="btn btn-primary" value="Add">
+	        </span>
+	      </div>
+	    </div>
+	  </form>
+
+		<!-- Todos list -->
+	  <p class="form-group" ng-repeat="todo in todos">
+	    <input type="text" ng-model="todo" class="form-control">
+	  </p>
+	</div>
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular.min.js"></script>
+	<script src="js/todoApp.js"></script>
+</body>
+</html>
